@@ -1,0 +1,31 @@
+:root {
+  /************ Custom Properties ***********/
+  /* Main Color */
+  --primary-color: #014d4e;
+  /* Secondary Color */
+  --secondary-color: #ff9408;
+  /* Secondary Color Modified */
+  --secondary-color-m: #ff94088e;
+  /* tertiary color */
+  --tertiary-color: #017374;
+  /* tertiary color modified */
+  --tertiary-color-m: #01727498;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root,
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=styles.css.map */
