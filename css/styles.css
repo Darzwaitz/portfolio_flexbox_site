@@ -1,5 +1,6 @@
 :root {
   /************ Custom Properties ***********/
+  --primary-font: "Baloo Tamma 2", cursive;
   /* Main Color */
   --primary-color: #014d4e;
   /* Secondary Color */
@@ -28,6 +29,17 @@ html {
 body {
   box-sizing: border-box;
   display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
 }
 
 .side-nav {
@@ -68,5 +80,63 @@ body {
   color: var(--color-white);
   padding-bottom: calc(2rem + 0.6677vw);
   transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+main {
+  flex: 1;
+  font-family: var(--primary-font);
+}
+
+main .header {
+  background-color: var(--secondary-color);
+  height: calc(3vw + 3vh);
+  z-index: 2;
+}
+
+main .header__main-nav {
+  height: 100%;
+}
+
+main .header__main-nav--links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main .header__main-nav--links li {
+  padding-right: 3vw;
+}
+
+main .header__main-nav--links li a {
+  position: relative;
+  padding: 0.2rem 0.6rem;
+  font-size: calc(1rem + 0.66667vw);
+}
+
+main .header__main-nav--links li a:link::before, main .header__main-nav--links li a:link::after, main .header__main-nav--links li a:visited::before, main .header__main-nav--links li a:visited::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--color-white);
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+main .header__main-nav--links li a:link::before, main .header__main-nav--links li a:visited::before {
+  top: 0;
+  transform-origin: left;
+}
+
+main .header__main-nav--links li a:link::after, main .header__main-nav--links li a:visited::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+main .header__main-nav--links li a:hover::before, main .header__main-nav--links li a:active::after, main .header__main-nav--links li a:active::before, main .header__main-nav--links li a:hover::after {
+  transform: scaleX(1);
 }
 /*# sourceMappingURL=styles.css.map */
