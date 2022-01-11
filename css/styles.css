@@ -97,6 +97,10 @@ a:visited {
   transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+.fade {
+  opacity: 1 !important;
+}
+
 main {
   flex: 1;
   font-family: var(--primary-font);
@@ -106,6 +110,28 @@ main .header {
   background-color: var(--secondary-color);
   height: calc(3vw + 3vh);
   z-index: 2;
+}
+
+@media screen and (max-width: 38.125em) {
+  main .header {
+    position: absolute;
+  }
+}
+
+main .header .clicked {
+  left: 55%;
+}
+
+main .header .clicked .line-1 {
+  transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+}
+
+main .header .clicked .line-2 {
+  opacity: 0;
+}
+
+main .header .clicked .line-3 {
+  transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
 }
 
 main .header__main-nav {
@@ -135,11 +161,17 @@ main .header__main-nav {
     background-color: var(--secondary-color);
     border-radius: 50%;
     display: flex;
+    align-items: center;
+  }
+  main .header__main-nav--hamburger-container {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    height: 60%;
+    width: 100%;
   }
-  main .header__main-nav--hamburger .line {
+  main .header__main-nav--hamburger-container .line {
     width: 50%;
     height: 0.3rem;
     background-color: var(--color-white);
@@ -172,7 +204,32 @@ main .header__main-nav--links li {
   main .header__main-nav--links li {
     margin-bottom: 4vh;
     margin-left: 6vw;
+    opacity: 0;
   }
+}
+
+main .header__main-nav--links li:nth-child(1) {
+  transition: all 0.5s ease-in-out 0.1s;
+}
+
+main .header__main-nav--links li:nth-child(2) {
+  transition: all 0.5s ease-in-out 0.2s;
+}
+
+main .header__main-nav--links li:nth-child(3) {
+  transition: all 0.5s ease-in-out 0.3s;
+}
+
+main .header__main-nav--links li:nth-child(4) {
+  transition: all 0.5s ease-in-out 0.4s;
+}
+
+main .header__main-nav--links li:nth-child(5) {
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+main .header__main-nav--links li:nth-child(6) {
+  transition: all 0.5s ease-in-out 0.6s;
 }
 
 main .header__main-nav--links li a {

@@ -1,3 +1,7 @@
+.fade {
+  opacity: 1 !important;
+}
+
 main {
   flex: 1; // take up all remaining space
   font-family: var(--primary-font);
@@ -6,6 +10,26 @@ main {
     background-color: var(--secondary-color);
     height: calc(3vw + 3vh);
     z-index: 2;
+
+    // media query - phone size
+    @include respond(phone) {
+      position: absolute;
+    }
+
+    // js toggle class
+    .clicked {
+      left: 55%;
+      // hamburger menu anim.
+      .line-1 {
+        transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+      }
+      .line-2 {
+        opacity: 0;
+      }
+      .line-3 {
+        transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
+      }
+    }
 
     &__main-nav {
       height: 100%;
@@ -32,22 +56,29 @@ main {
           cursor: pointer;
           background-color: var(--secondary-color);
           border-radius: 50%;
-
           display: flex;
-          flex-direction: column;
-          justify-content: space-around;
           align-items: center;
-          .line {
-            // media query - phone size
-            // @include respond(phone) {
-            width: 50%;
-            height: 0.3rem;
-            background-color: var(--color-white);
-            border-radius: 0.2rem;
-            transition: all 0.4s ease-in-out;
-            // align-items: center;
-            // float: ;
-            // }
+
+          &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            // background-color: red;
+            height: 60%;
+            width: 100%;
+            .line {
+              // media query - phone size
+              // @include respond(phone) {
+              width: 50%;
+              height: 0.3rem;
+              background-color: var(--color-white);
+              border-radius: 0.2rem;
+              transition: all 0.4s ease-in-out;
+              // align-items: center;
+              // float: ;
+              // }
+            }
           }
         }
       }
@@ -73,6 +104,25 @@ main {
           @include respond(phone) {
             margin-bottom: 4vh;
             margin-left: 6vw;
+            opacity: 0;
+          }
+          &:nth-child(1) {
+            transition: all 0.5s ease-in-out 0.1s;
+          }
+          &:nth-child(2) {
+            transition: all 0.5s ease-in-out 0.2s;
+          }
+          &:nth-child(3) {
+            transition: all 0.5s ease-in-out 0.3s;
+          }
+          &:nth-child(4) {
+            transition: all 0.5s ease-in-out 0.4s;
+          }
+          &:nth-child(5) {
+            transition: all 0.5s ease-in-out 0.5s;
+          }
+          &:nth-child(6) {
+            transition: all 0.5s ease-in-out 0.6s;
           }
 
           a {
