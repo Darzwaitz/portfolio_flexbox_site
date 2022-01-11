@@ -1,3 +1,18 @@
+/*
+0 - 600px:      Phone
+
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where normal desktop styles apply
+1800px:         Big desktop
+
+*/
+/* $breakpoint argument choicez: 
+ - phone
+ - tab-port
+ - tab-land
+ - big-desktop
+ */
 :root {
   /************ Custom Properties ***********/
   --primary-font: "Baloo Tamma 2", cursive;
@@ -97,6 +112,42 @@ main .header__main-nav {
   height: 100%;
 }
 
+@media screen and (max-width: 38.125em) {
+  main .header__main-nav {
+    width: 30rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 38.125em) {
+  main .header__main-nav--hamburger {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .header__main-nav--hamburger .line {
+    width: 50%;
+    height: 0.3rem;
+    background-color: var(--color-white);
+    border-radius: 0.2rem;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
 main .header__main-nav--links {
   width: 100%;
   height: 100%;
@@ -105,8 +156,23 @@ main .header__main-nav--links {
   align-items: center;
 }
 
+@media screen and (max-width: 38.125em) {
+  main .header__main-nav--links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
 main .header__main-nav--links li {
   padding-right: 3vw;
+}
+
+@media screen and (max-width: 38.125em) {
+  main .header__main-nav--links li {
+    margin-bottom: 4vh;
+    margin-left: 6vw;
+  }
 }
 
 main .header__main-nav--links li a {

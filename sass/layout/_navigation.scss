@@ -10,6 +10,48 @@ main {
     &__main-nav {
       height: 100%;
 
+      // media query - phone size
+      @include respond(phone) {
+        width: 30rem;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -30rem;
+        background-color: var(--secondary-color);
+        text-align: center;
+      }
+
+      &--hamburger {
+        // media query - phone size
+        @include respond(phone) {
+          width: 5rem;
+          height: 5rem;
+          position: fixed;
+          top: 2rem;
+          right: 3rem;
+          cursor: pointer;
+          background-color: var(--secondary-color);
+          border-radius: 50%;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          .line {
+            // media query - phone size
+            // @include respond(phone) {
+            width: 50%;
+            height: 0.3rem;
+            background-color: var(--color-white);
+            border-radius: 0.2rem;
+            transition: all 0.4s ease-in-out;
+            // align-items: center;
+            // float: ;
+            // }
+          }
+        }
+      }
+
       &--links {
         width: 100%;
         height: 100%;
@@ -17,8 +59,21 @@ main {
         justify-content: flex-end;
         align-items: center;
 
+        // media query - phone size
+        @include respond(phone) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
         li {
           padding-right: 3vw;
+
+          // media query - phone size
+          @include respond(phone) {
+            margin-bottom: 4vh;
+            margin-left: 6vw;
+          }
 
           a {
             position: relative;
