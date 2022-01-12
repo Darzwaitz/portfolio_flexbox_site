@@ -6,6 +6,6 @@ hamburger.addEventListener('click', ()=>{
     hamburgerContainer.classList.toggle("clicked");
     links.forEach((link) => {
         link.classList.toggle('fade');
-        console.log(link);
+        // console.log(link);
     });
 });
