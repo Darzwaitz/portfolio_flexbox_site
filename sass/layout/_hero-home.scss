@@ -38,7 +38,7 @@
     }
 
     &--para {
-      font-family: "Indie Flower", cursive;
+      font-family: var(--secondary-font);
       font-size: calc(1.5rem + 1vw);
       color: var(--color-white);
     }

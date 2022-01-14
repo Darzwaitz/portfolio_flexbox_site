@@ -16,6 +16,7 @@
 :root {
   /************ Custom Properties ***********/
   --primary-font: "Baloo Tamma 2", cursive;
+  --secondary-font: "Indie Flower", cursive;
   /* Main Color */
   --primary-color: #014d4e;
   /* Secondary Color */
@@ -38,6 +39,11 @@
 .about-me__content--title, .about-me__content--para {
   margin-bottom: 4rem;
   letter-spacing: 0.2rem;
+}
+
+.services .service i, .services--title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
 }
 
 /* ANIMATIONS */
@@ -328,7 +334,7 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
 }
 
 .showcase__content--para {
-  font-family: "Indie Flower", cursive;
+  font-family: var(--secondary-font);
   font-size: calc(1.5rem + 1vw);
   color: var(--color-white);
 }
@@ -455,5 +461,58 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
 .about-me__content--link:hover::after, .about-me__content--link:active::after {
   transform: scaleY(1);
   transform-origin: top;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6rem 2rem 2rem;
+  background-color: var(--primary-color);
+}
+
+.services .service {
+  padding: 4rem;
+  margin: 0 2rem 4rem;
+  flex-basis: 40rem;
+  flex-grow: 1;
+  background-color: var(--secondary-color);
+  border-bottom: 0.2rem solid var(--secondary-color);
+  border-right: 0.2rem solid var(--secondary-color);
+  border-left: 0.2rem solid var(--secondary-color);
+  position: relative;
+  z-index: 1;
+}
+
+.services .service::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+  z-index: -1;
+}
+
+.services .service:hover::after, .services .service:active::after {
+  transform: scaleX(1);
+}
+
+.services .service i {
+  color: var(--color-white);
+}
+
+.services--title {
+  text-transform: uppercase;
+}
+
+.services--para {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  color: var(--color-white);
 }
 /*# sourceMappingURL=styles.css.map */
