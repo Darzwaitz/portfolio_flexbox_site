@@ -7,6 +7,12 @@
   padding: 6rem 2rem 2rem;
   background-color: var(--primary-color);
 
+  // media query - phone size
+  @include respond(phone) {
+    padding: calc(1rem + 2vw);
+    margin: 0 0 calc(1rem + 2vw);
+  }
+
   .service {
     padding: 4rem;
     margin: 0 2rem 4rem;
@@ -47,10 +53,20 @@
   &--title {
     @extend %ititle;
     text-transform: uppercase;
+
+    // media query - phone size
+    @include respond(phone) {
+      font-size: calc(1.2rem + 2vw);
+    }
   }
   &--para {
     font-family: var(--secondary-font);
     font-size: 2rem;
     color: var(--color-white);
+
+    // media query - phone size
+    @include respond(phone) {
+      font-size: calc(0.8rem + 1.5vw);
+    }
   }
 }

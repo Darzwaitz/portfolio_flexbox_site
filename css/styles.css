@@ -472,6 +472,13 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   background-color: var(--primary-color);
 }
 
+@media screen and (max-width: 38.125em) {
+  .services {
+    padding: calc(1rem + 2vw);
+    margin: 0 0 calc(1rem + 2vw);
+  }
+}
+
 .services .service {
   padding: 4rem;
   margin: 0 2rem 4rem;
@@ -510,9 +517,21 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 38.125em) {
+  .services--title {
+    font-size: calc(1.2rem + 2vw);
+  }
+}
+
 .services--para {
   font-family: var(--secondary-font);
   font-size: 2rem;
   color: var(--color-white);
+}
+
+@media screen and (max-width: 38.125em) {
+  .services--para {
+    font-size: calc(0.8rem + 1.5vw);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
