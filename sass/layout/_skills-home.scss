@@ -14,6 +14,12 @@
     &--title {
       font-size: 3rem;
       margin-bottom: 2rem;
+
+      // media query - phone size
+      @include respond(phone) {
+        // @extend %font-title-phone;
+        font-size: calc(0.8rem + 1.5vw);
+      }
     }
 
     &--progress {

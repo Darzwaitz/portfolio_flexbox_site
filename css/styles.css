@@ -628,6 +628,12 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 38.125em) {
+  .skills__design--title, .skills__coding--title {
+    font-size: calc(0.8rem + 1.5vw);
+  }
+}
+
 .skills__design--progress, .skills__coding--progress {
   position: relative;
   display: block;
