@@ -65,6 +65,78 @@
   }
 }
 
+@keyframes web-design-1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
+@keyframes print-design-2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+
+@keyframes logo-design-3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+@keyframes graphic-design-4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+@keyframes html-code-1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 99%;
+  }
+}
+
+@keyframes js-code-2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+@keyframes py-code-3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 5%;
+  }
+}
+
+@keyframes sql-code-4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
 /* / ANIMATIONS */
 *,
 *::after,
@@ -569,14 +641,48 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
 .skills__design h4, .skills__coding h4 {
   font-size: 2rem;
   color: var(--color-white);
+  text-transform: none;
 }
 
 .skills__design span, .skills__coding span {
+  border-radius: 1rem;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   height: 2rem;
   background-color: var(--secondary-color);
   width: 4rem;
+}
+
+.skills__design--progress-1 {
+  animation: web-design-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.skills__design--progress-2 {
+  animation: print-design-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.skills__design--progress-3 {
+  animation: logo-design-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.skills__design--progress-4 {
+  animation: graphic-design-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.skills__coding--progress-1 {
+  animation: html-code-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.skills__coding--progress-2 {
+  animation: js-code-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.skills__coding--progress-3 {
+  animation: py-code-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.skills__coding--progress-4 {
+  animation: sql-code-4 4s infinite cubic-bezier(1, 0, 0, 1);
 }
 /*# sourceMappingURL=styles.css.map */

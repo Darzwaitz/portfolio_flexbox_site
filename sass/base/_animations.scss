@@ -11,6 +11,46 @@
   }
 }
 
+// @mixin designMixin($name, $end) {
+//   @keyframes #{$name} {
+//     0% {
+//       width: 0%;
+//     }
+//     100% {
+//       width: $end;
+//     }
+//   }
+// }
+@mixin designMixin($name, $end) {
+  @keyframes #{$name} {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: $end;
+    }
+  }
+}
+@include designMixin(web-design-1, 25%);
+@include designMixin(print-design-2, 35%);
+@include designMixin(logo-design-3, 45%);
+@include designMixin(graphic-design-4, 55%);
+
+@mixin codeMixin($name, $end) {
+  @keyframes #{$name} {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: $end;
+    }
+  }
+}
+@include codeMixin(html-code-1, 99%);
+@include codeMixin(js-code-2, 45%);
+@include codeMixin(py-code-3, 5%);
+@include codeMixin(sql-code-4, 25%);
+
 // @keyframes moveInLeft {
 //     0% {
 //         opacity: 0;
