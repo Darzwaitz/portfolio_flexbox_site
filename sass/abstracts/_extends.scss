@@ -11,3 +11,9 @@
   margin-bottom: 2rem;
   font-size: 3rem;
 }
+%skills {
+  padding: calc(1rem + 2vw);
+  text-transform: uppercase;
+  flex-basis: 40rem;
+  flex-grow: 1;
+}

@@ -1,0 +1,43 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: calc(1rem + 2vw);
+  background-color: var(--tertiary-color);
+
+  &__design,
+  &__coding {
+    @extend %skills;
+
+    &--title {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    &--progress {
+      position: relative;
+      display: block;
+      padding: 0.5rem;
+      border-radius: 3rem;
+      background-color: var(--primary-color);
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+      color: var(--color-white);
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      height: 2rem;
+      background-color: var(--secondary-color);
+      width: 4rem;
+    }
+  }
+}

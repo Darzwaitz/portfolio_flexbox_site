@@ -46,6 +46,13 @@
   font-size: 3rem;
 }
 
+.skills__design, .skills__coding {
+  padding: calc(1rem + 2vw);
+  text-transform: uppercase;
+  flex-basis: 40rem;
+  flex-grow: 1;
+}
+
 /* ANIMATIONS */
 @keyframes hero {
   0% {
@@ -533,5 +540,43 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   .services--para {
     font-size: calc(0.8rem + 1.5vw);
   }
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: calc(1rem + 2vw);
+  background-color: var(--tertiary-color);
+}
+
+.skills__design--title, .skills__coding--title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.skills__design--progress, .skills__coding--progress {
+  position: relative;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.skills__design h4, .skills__coding h4 {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.skills__design span, .skills__coding span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 2rem;
+  background-color: var(--secondary-color);
+  width: 4rem;
 }
 /*# sourceMappingURL=styles.css.map */
