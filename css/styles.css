@@ -723,10 +723,50 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   overflow: hidden;
 }
 
+.testimonials__card:hover .testimonials__card--content, .testimonials__card:active .testimonials__card--content {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+
+@media screen and (max-width: 28.75em) {
+  .testimonials__card:hover .testimonials__card--content, .testimonials__card:active .testimonials__card--content {
+    transform-origin: top;
+  }
+}
+
+@media screen and (max-width: 38.125em) {
+  .testimonials__card:hover .testimonials__card-title, .testimonials__card:active .testimonials__card-title {
+    font-size: calc(1.2rem + 2vw);
+  }
+}
+
+.testimonials__card:hover .testimonials__card--img img, .testimonials__card:active .testimonials__card--img img {
+  transform: scale(0.98);
+  filter: grayscale(50%);
+}
+
 .testimonials__card--content {
   position: absolute;
   top: 60%;
   left: 0;
+  width: 80%;
+  background-color: var(--tertiary-color-m);
+  padding: 1.5rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s ease-in-out;
+}
+
+@media screen and (max-width: 28.75em) {
+  .testimonials__card--content {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 .testimonials__card--content-title {
@@ -734,9 +774,21 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 38.125em) {
+  .testimonials__card--content-title {
+    font-size: calc(1.2rem + 2vw);
+  }
+}
+
 .testimonials__card--content-para {
   font-family: var(--secondary-font);
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 38.125em) {
+  .testimonials__card--content-para {
+    font-size: calc(0.8rem + 1.5vw);
+  }
 }
 
 .testimonials__card--img {
