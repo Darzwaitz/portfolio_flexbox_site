@@ -155,6 +155,13 @@ body {
   display: flex;
 }
 
+@media (min-width: 94.37em) {
+  body {
+    width: 151rem;
+    margin: 0 auto;
+  }
+}
+
 li {
   list-style: none;
 }
@@ -630,7 +637,7 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
 
 @media screen and (max-width: 38.125em) {
   .skills__design--title, .skills__coding--title {
-    font-size: calc(0.8rem + 1.5vw);
+    font-size: calc(1.2rem + 2vw);
   }
 }
 
@@ -648,6 +655,12 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   font-size: 2rem;
   color: var(--color-white);
   text-transform: none;
+}
+
+@media screen and (max-width: 38.125em) {
+  .skills__design h4, .skills__coding h4 {
+    font-size: calc(0.8rem + 1.5vw);
+  }
 }
 
 .skills__design span, .skills__coding span {

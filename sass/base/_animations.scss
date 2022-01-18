@@ -21,7 +21,7 @@
 //     }
 //   }
 // }
-@mixin designMixin($name, $end) {
+@mixin skillsMixin($name, $end) {
   @keyframes #{$name} {
     0% {
       width: 0%;
@@ -31,25 +31,14 @@
     }
   }
 }
-@include designMixin(web-design-1, 25%);
-@include designMixin(print-design-2, 35%);
-@include designMixin(logo-design-3, 45%);
-@include designMixin(graphic-design-4, 55%);
-
-@mixin codeMixin($name, $end) {
-  @keyframes #{$name} {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: $end;
-    }
-  }
-}
-@include codeMixin(html-code-1, 99%);
-@include codeMixin(js-code-2, 45%);
-@include codeMixin(py-code-3, 5%);
-@include codeMixin(sql-code-4, 25%);
+@include skillsMixin(web-design-1, 25%);
+@include skillsMixin(print-design-2, 35%);
+@include skillsMixin(logo-design-3, 45%);
+@include skillsMixin(graphic-design-4, 55%);
+@include skillsMixin(html-code-1, 99%);
+@include skillsMixin(js-code-2, 45%);
+@include skillsMixin(py-code-3, 5%);
+@include skillsMixin(sql-code-4, 25%);
 
 // @keyframes moveInLeft {
 //     0% {
