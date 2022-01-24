@@ -1,0 +1,38 @@
+.contact {
+  height: 100vh;
+  background-image: url(../../img/full-bg-03.jpg);
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  // media query - smallest size
+  @include respond(smallest) {
+    background-position: 14% 5%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40rem;
+    background-color: var(--tertiary-color-m);
+
+    input,
+    textarea {
+      color: var(--color-white);
+      font-family: var(--secondary-font);
+      font-size: 1.5rem;
+      padding: 2rem;
+      background: transparent;
+      border: none;
+      border-bottom: var(--secondary-color) solid 0.1rem;
+    }
+    textarea {
+      height: 30vh;
+    }
+    input[type="submit"] {
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

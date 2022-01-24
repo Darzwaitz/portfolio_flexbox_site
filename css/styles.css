@@ -802,4 +802,45 @@ main .header__main-nav--links li a:hover::before, main .header__main-nav--links 
   object-fit: cover;
   transition: all 0.35s ease-in-out;
 }
+
+.contact {
+  height: 100vh;
+  background-image: url(../../img/full-bg-03.jpg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 28.75em) {
+  .contact {
+    background-position: 14% 5%;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40rem;
+  background-color: var(--tertiary-color-m);
+}
+
+.contact__form input,
+.contact__form textarea {
+  color: var(--color-white);
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: var(--secondary-color) solid 0.1rem;
+}
+
+.contact__form textarea {
+  height: 30vh;
+}
+
+.contact__form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
 /*# sourceMappingURL=styles.css.map */
